@@ -48,7 +48,7 @@ else if (userChoice === "2")
 		var num1 = parseInt(prompt("Enter a number."));
 		var num2 = parseInt(prompt("Enter another number."));
 		var total = num1 + num2;
-		alert("Your sum is: " + summ);
+		alert("Your sum is: " + total);
 	}
 	if (AddSubtract === "s")
 	{
