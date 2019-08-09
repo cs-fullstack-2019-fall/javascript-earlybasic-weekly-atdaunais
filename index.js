@@ -1,34 +1,53 @@
-var userChoice = prompt("Welcome to my program! Press 1 to count. Press 2 to use a calculator. Or press 'q' to quit.");
+var quitKey = true;
+
+while(quitKey === true)
+{
+var userChoice = prompt("Welcome to Andrew's program! Press 1 to count. Press 2 to use a calculator. Or press 'q' to quit.");
 if (userChoice === "1")
 {
 	var countingChoice = prompt("Would you like to count by ones (enter 1) or twos (enter 2)?");
 	if (countingChoice === "1")
 	{
 		var countingTo1 = parseInt(prompt("Enter a number for me to count to in the console."));
-		var x = 1;
-		while(x <= countingTo1)
+		var userStart1 = parseInt(prompt("Pick a number to start from."));
+
+		if (userStart1 > countingTo1)
 		{
-			console.log(x++);
+			alert("ERROR");
 		}
+
+		while(userStart1 <= countingTo1)
+		{
+			console.log(userStart1);
+			userStart1++;
+		}
+		
 	}
 	if (countingChoice === "2")
 	{
 		var countingTo2 = parseInt(prompt("Enter a number for me to count to in the console."));
-		var y = 1;
-		while(y < countingTo2)
+		var userStart2 = parseInt(prompt("Pick a number to start from."));
+
+		if (userStart2 > countingTo2)
 		{
-			console.log(y = y + 2);
+			alert("ERROR");
+		}
+
+		while(userStart2 <= countingTo2)
+		{
+			console.log(userStart2);
+			userStart2 = userStart2 + 2;
 		}
 	}
 }
-if (userChoice === "2")
+else if (userChoice === "2")
 {
 	var AddSubtract = prompt("Would you like to add (enter 'a') or subtract (enter 's')?");
 	if (AddSubtract === "a")
 	{
 		var num1 = parseInt(prompt("Enter a number."));
 		var num2 = parseInt(prompt("Enter another number."));
-		var summ = num1 + num2;
+		var total = num1 + num2;
 		alert("Your sum is: " + summ);
 	}
 	if (AddSubtract === "s")
@@ -38,4 +57,13 @@ if (userChoice === "2")
 		var total = num1 - num2;
 		alert("Your difference is: " + total);
 	}
+}
+else if (userChoice === "q")
+{
+	quitKey = false;
+}
+else
+{
+	alert("ERROR")
+}
 }
