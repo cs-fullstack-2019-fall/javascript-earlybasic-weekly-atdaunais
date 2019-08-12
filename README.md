@@ -1,3 +1,6 @@
+Excellent Job! Weel done!
+
+
 # javaScript-earlybasic-weekly
 
 ## Weekly Project (Total 10 points)
