@@ -1,12 +1,21 @@
 let flag = false;
 
 function count() {
+    let userCount = prompt("Would you like to count by ones (press 1) or twos (press 2)?");
     let userNumber1 = parseInt(prompt("Choose a number to count from: "));
     let userNumber2 = parseInt(prompt("Choose a number to count to: "));
 
-    while (userNumber1 <= userNumber2) {
-        console.log(userNumber1);
-        userNumber1++;
+    if (userCount === "1") {
+        while (userNumber1 <= userNumber2) {
+            console.log(userNumber1);
+            userNumber1++;
+        }
+    }
+    else if (userCount === "2"){
+        while (userNumber1 <= userNumber2) {
+            console.log(userNumber1);
+            userNumber1 = userNumber1 + 2;
+        }
     }
 }
 
